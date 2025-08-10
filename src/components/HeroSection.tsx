@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import heroImage from '@/assets/hero-banking-cybersecurity.jpg';
+import Navbar from './Navbar';
+import heroImage from '@/assets/hero-banking-ai-cybersecurity.jpg';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,7 +14,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <>
+      <Navbar />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Hero Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -69,8 +72,9 @@ const HeroSection = () => {
             <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 
